@@ -6,9 +6,9 @@ const path = require('path');
   try {
     const github = getOctokit(process.env.GITHUB_RELEASE_TOKEN);
 
-    const version = fs.readFileSync(path.join(__dirname, "../.release-version"));
+    const version = fs.readFileSync(path.join(__dirname, "../.release-version")).trim();
 
-    const uploadUrl = `https://github.com/repos/getto-systems/project-example-docs/releases/${version}/assets`;
+    const uploadUrl = `https://api.github.com/repos/getto-systems/project-example-docs/releases/assets/${version}`;
     const assetPath = path.join(__dirname, "../build.tar.gz");
     const assetName = "docs.tar.gz";
 
