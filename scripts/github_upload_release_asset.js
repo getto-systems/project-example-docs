@@ -8,7 +8,7 @@ const path = require('path');
 
     const version = `${fs.readFileSync(path.join(__dirname, "../.release-version"))}`.trim();
 
-    const uploadUrl = `https://api.github.com/repos/getto-systems/project-example-docs/releases/assets/${version}`;
+    const uploadUrl = `https://api.github.com/repos/getto-systems/project-example-docs/releases/${version}/assets`;
     const assetPath = path.join(__dirname, "../build.tar.gz");
     const assetName = "docs.tar.gz";
 
