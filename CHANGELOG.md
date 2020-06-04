@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 0.1.17
+
+- fix: bump-version.sh : See merge request getto-systems-base/labo/project-example/docs!40
+- add: bump-version.sh : See merge request getto-systems-base/labo/project-example/docs!38
+
+
 ## Version : 0.1.16
 
 - fix: deploy script : See merge request getto-systems-base/labo/project-example/docs!36
