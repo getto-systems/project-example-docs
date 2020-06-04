@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.1.13
+
+- fix: deploy script : See merge request getto-systems-base/labo/project-example/docs!30
+
+
 ## Version : 0.1.12
 
 - fix: deploy script : See merge request getto-systems-base/labo/project-example/docs!28
