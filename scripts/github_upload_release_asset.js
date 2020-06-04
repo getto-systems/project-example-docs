@@ -26,8 +26,8 @@ const path = require('path');
     await github.repos.uploadReleaseAsset({
       url: release.data.assets_url,
       headers,
-      file: fs.readFileSync(assetPath)
       name: "docs.tar.gz",
+      file: fs.readFileSync(assetPath),
     });
   } catch (error) {
     console.log(error);
