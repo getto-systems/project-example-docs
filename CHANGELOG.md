@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.1.2
+
+- fix: devServer config : See merge request getto-systems-base/labo/project-example/docs!8
+
+
 ## Version : 0.1.1
 
 - add: bump-ignore : See merge request getto-systems-base/labo/project-example/docs!6
