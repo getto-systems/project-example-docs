@@ -16,17 +16,14 @@ const path = require('path');
 
     const assetPath = path.join(__dirname, "../build.tar.gz");
 
-    const contentLength = filePath => fs.statSync(filePath).size;
-
     const headers = {
       'content-type': "application/gzip",
-      'content-length': contentLength(assetPath),
     };
 
     await github.repos.uploadReleaseAsset({
       url: `${release.data.upload_url}&name=docs.tar.gz`,
       headers,
-      file: fs.readFileSync(assetPath),
+      data: fs.readFileSync(assetPath),
     });
   } catch (error) {
     console.log(error);
