@@ -24,7 +24,7 @@ const path = require('path');
     };
 
     await github.repos.uploadReleaseAsset({
-      url: release.data.upload_url.replace("&", "docs.tar.gz"),
+      url: `${release.data.upload_url}&name=docs.tar.gz`,
       headers,
       file: fs.readFileSync(assetPath),
     });
