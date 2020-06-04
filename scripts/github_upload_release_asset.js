@@ -1,10 +1,10 @@
-const { GitHub } = require('@actions/github');
+const { getOctokit } = require('@actions/github');
 const fs = require('fs');
 const path = require('path');
 
 (async function run() {
   try {
-    const github = new GitHub(process.env.GITHUB_TOKEN);
+    const github = getOctokit(process.env.GITHUB_TOKEN);
 
     const version = fs.readFileSync(path.join(__dirname, "../.release-version"));
 
