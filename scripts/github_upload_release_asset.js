@@ -24,11 +24,10 @@ const path = require('path');
     };
 
     await github.repos.uploadReleaseAsset({
-      url: release.data.upload_url({
-        name: "docs.tar.gz",
-      }),
+      url: release.data.assets_url,
       headers,
       file: fs.readFileSync(assetPath)
+      name: "docs.tar.gz",
     });
   } catch (error) {
     console.log(error);
