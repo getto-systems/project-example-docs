@@ -8,7 +8,12 @@ const path = require('path');
 
     const version = `${fs.readFileSync(path.join(__dirname, "../.release-version"))}`.trim();
 
-    const uploadUrl = `https://uploads.github.com/repos/getto-systems/project-example-docs/releases/${version}/assets?name=docs.tar.gz`;
+    const release = await github.repos.createRelease({
+      owner: "getto-systems",
+      repo: "project-example-docs",
+      tag_name: version,
+    });
+
     const assetPath = path.join(__dirname, "../build.tar.gz");
 
     const contentLength = filePath => fs.statSync(filePath).size;
@@ -19,7 +24,7 @@ const path = require('path');
     };
 
     await github.repos.uploadReleaseAsset({
-      url: uploadUrl,
+      url: release.data.upload_url,
       headers,
       file: fs.readFileSync(assetPath)
     });
