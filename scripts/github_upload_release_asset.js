@@ -4,7 +4,7 @@ const path = require('path');
 
 (async function run() {
   try {
-    const github = getOctokit(process.env.GITHUB_ACCESS_TOKEN);
+    const github = getOctokit(process.env.GITHUB_RELEASE_TOKEN);
 
     const version = fs.readFileSync(path.join(__dirname, "../.release-version"));
 
