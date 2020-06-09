@@ -63,6 +63,7 @@ release_deploy:
   before_script:
     - npm clean-install
   script:
+    - scripts/replace-root-path.sh
     - npm run deploy
 
 release_success:

@@ -24,7 +24,8 @@ function devServer() {
   }
 
   return {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname),
+    publicPath: "/dist/",
 
     host: "0.0.0.0",
     port: process.env.SECURE_APP_PORT,
