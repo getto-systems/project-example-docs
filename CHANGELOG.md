@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.1.18
+
+- fix: root path : See merge request getto-systems-base/labo/project-example/docs!43
+
+
 ## Version : 0.1.17
 
 - fix: bump-version.sh : See merge request getto-systems-base/labo/project-example/docs!40
