@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.1.19
+
+- fix: prepare : See merge request getto-systems-base/labo/project-example/docs!45
+
+
 ## Version : 0.1.18
 
 - fix: root path : See merge request getto-systems-base/labo/project-example/docs!43
