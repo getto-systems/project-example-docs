@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Version : 0.1.20
+
+- merge: dependabot : See merge request getto-systems-base/labo/project-example/docs!48
+
+- fix: prepare : See merge request getto-systems-base/labo/project-example/docs!47
+
+
+
 ## Version : 0.1.19
 
 - fix: prepare : See merge request getto-systems-base/labo/project-example/docs!45
