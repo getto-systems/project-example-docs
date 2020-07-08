@@ -1,1 +1,26 @@
-console.log("prepare secure");
+const fs = require("fs");
+const path = require("path");
+
+const isProduction = (() => {
+  return `${process.argv[2]}`.replace(/^--/, "") === "production";
+})();
+
+const version = (() => {
+  if (isProduction) {
+    const file = path.join(__dirname, "../.release-version");
+    const content = fs.readFileSync(file, "utf8");
+    return content.replace(/\s/, "");
+  } else {
+    return "dist";
+  }
+})();
+
+const config = {
+  isProduction,
+  version,
+};
+const data = "export const config = " + JSON.stringify(config, null, "  ");
+
+console.log(data);
+
+fs.writeFileSync(path.join(__dirname, "./src/docs/config.js"), data);
