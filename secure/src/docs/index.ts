@@ -1,6 +1,6 @@
 import { h, render } from "preact";
 import { html } from "htm/preact";
-import { config } from "./config.js";
+import { config } from "../config.js";
 import { GettoExamplePages, Breadcrumbs } from "./pages.ts";
 import { Menu, BreadcrumbLinks, Footer } from "./layout.ts";
 
