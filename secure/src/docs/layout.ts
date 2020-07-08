@@ -2,14 +2,18 @@ import { useState } from "preact/hooks";
 import { html } from "htm/preact";
 import { CategoryTree, Breadcrumbs, Category, PageTree, Page } from "./pages.ts";
 
-type MenuProps = {
+export type MenuProps = {
   categories: Array<CategoryTree>,
   breadcrumbs: Breadcrumbs,
   version: string,
 }
 
-type BreadcrumbProps = {
+export type BreadcrumbProps = {
   breadcrumbs: Breadcrumbs,
+}
+
+export function setDocumentTitle(title: string) {
+  document.title = `${title} | Getto Example`;
 }
 
 type State = {

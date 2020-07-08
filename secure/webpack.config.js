@@ -8,6 +8,7 @@ module.exports = {
     const entry = {};
 
     entry[`${root}/index`] = path.join(__dirname, `src/${root}/index.ts`);
+    entry[`${root}/auth`]  = path.join(__dirname, `src/${root}/auth.ts`);
 
     return entry;
   },
