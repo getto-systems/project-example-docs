@@ -58,12 +58,16 @@ export function GettoExamplePages(info: PageInfo): [Array<CategoryTree>, Breadcr
 }
 
 function all(version: string): Array<CategoryTree> {
+  const main = `/${version}`;
+  const docs = `/${version}/docs`;
+
   return [
     [ { category: "documents", label: "Documents" }, [
-      [ { page: "documents", label: "トップ", href: `/${version}/docs/index.html`, icon: "home" }, [] ],
+      [ { page: "documents", label: "トップ",         href: `${docs}/index.html`, icon: "folder-alt" }, [] ],
+      [ { page: "main",      label: "メインページへ", href: `${main}/index.html`, icon: "home" }, [] ],
     ] ],
     [ { category: "auth", label: "Auth" }, [
-      [ { page: "auth", label: "認証・認可", href: `/${version}/docs/auth.html`, icon: "license" }, [] ],
+      [ { page: "auth", label: "認証・認可", href: `${docs}/auth.html`, icon: "license" }, [] ],
     ] ],
   ];
 }
