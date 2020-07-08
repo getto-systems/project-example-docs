@@ -1,19 +1,27 @@
 const fs = require("fs");
 const path = require("path");
 
-const root = "doc"
+const root = "docs"
 
 module.exports = {
   entry: () => {
     const entry = {};
 
-    entry[`${root}/index`] = path.join(__dirname, `src/${root}/index`);
+    entry[`${root}/index`] = path.join(__dirname, `src/${root}/index.ts`);
 
     return entry;
   },
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].js",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        loader: "ts-loader",
+      },
+    ],
   },
   devServer: devServer(),
 };
