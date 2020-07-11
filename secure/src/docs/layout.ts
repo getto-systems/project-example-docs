@@ -5,7 +5,12 @@ import { CategoryTree, Breadcrumbs, Category, PageTree, Page } from "./pages.ts"
 export type MenuProps = {
   categories: Array<CategoryTree>,
   breadcrumbs: Breadcrumbs,
+  credential: Credential,
   version: string,
+}
+
+export type Credential = {
+  roles: Array<string>,
 }
 
 export type BreadcrumbProps = {
@@ -44,16 +49,27 @@ export function Menu(props: MenuProps) {
   })();
 
   const [state, setState] = useState<State>({
-    menus: props.categories.map((tree) => createMenu(tree)),
+    menus: props.categories.reduce((acc, tree) => {
+      const [category, trees] = tree;
+
+      if (category.category.includes("detail/")) {
+        if (!props.credential.roles.includes("development")) {
+          return acc;
+        }
+      }
+
+      acc.push(createMenu(category, trees));
+      return acc;
+    }, [] as Array<Menu>),
   });
 
-  function createMenu(tree: CategoryTree): Menu {
-    const [category, trees] = tree;
+  function createMenu(category: Category, trees: Array<PageTree>): Menu {
     const items = trees.map(createItem);
+    const isActiveItemExists = items.some((item) => item.isActive);
 
     return {
       label: category.label,
-      isExpand: true,
+      isExpand: isActiveItemExists || !category.category.includes("detail/"),
       items,
     };
   }
