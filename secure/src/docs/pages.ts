@@ -63,11 +63,20 @@ function all(version: string): Array<CategoryTree> {
 
   return [
     [ { category: "documents", label: "Documents" }, [
-      [ { page: "documents", label: "トップ",         href: `${docs}/index.html`, icon: "folder-alt" }, [] ],
-      [ { page: "main",      label: "メインページへ", href: `${main}/index.html`, icon: "home" }, [] ],
+      [ { page: "documents", label: "トップ",         href: `${docs}/index.html`,  icon: "folder-alt" }, [] ],
+      [ { page: "main",      label: "メインページへ", href: `${main}/index.html`,  icon: "home" }, [] ],
+    ] ],
+    [ { category: "server", label: "Server" }, [
+      [ { page: "server", label: "サーバー構成", href: `${docs}/server.html`, icon: "file-name" }, [] ],
+    ] ],
+    [ { category: "detail/server", label: "Server 詳細設計" }, [
+      [ { page: "detail/server", label: "サーバー構成", href: `${docs}/detail/server.html`, icon: "list" }, [] ],
     ] ],
     [ { category: "auth", label: "Auth" }, [
-      [ { page: "auth", label: "認証", href: `${docs}/auth.html`, icon: "license" }, [] ],
+      [ { page: "auth", label: "認証・認可", href: `${docs}/auth.html`, icon: "file-name" }, [] ],
+    ] ],
+    [ { category: "detail/auth", label: "Auth 詳細設計" }, [
+      [ { page: "detail/auth", label: "認証・認可", href: `${docs}/detail/auth.html`, icon: "list" }, [] ],
     ] ],
   ];
 }

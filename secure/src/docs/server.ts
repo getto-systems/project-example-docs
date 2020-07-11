@@ -28,13 +28,13 @@ function Page(props: Props) {
   const [state, _] = useState("STATIC-STATE");
 
   useEffect(() => {
-    setDocumentTitle("ドキュメント");
+    setDocumentTitle("サーバー構成");
   }, [state]);
 
   return html`
     <article class="layout__main">
       <header class="main__header">
-        <h1 class="main__title">ドキュメント</h1>
+        <h1 class="main__title">サーバー構成</h1>
         <${BreadcrumbLinks} breadcrumbs=${props.breadcrumbs}/>
       </header>
       <section class="main__body">
@@ -42,32 +42,23 @@ function Page(props: Props) {
           <section class="box">
             <div>
               <header class="box__header">
-                <h2 class="box__title">GETTO project Example のゴール</h2>
+                <h2 class="box__title">サービスの継続提供のために</h2>
               </header>
               <section class="box__body paragraph">
-                <p>業務アプリケーションで使用可能な、ベースとなるテンプレートを提供</p>
-                <br/>
-                <p>各プロジェクトで、このテンプレートをコビーして始められるようにしたい</p>
+                <p>ランニングコストの削減</p>
+                <p>デプロイコストの削減</p>
+                <p>アップグレードコストの削減</p>
               </section>
             </div>
           </section>
           <section class="box">
             <div>
               <header class="box__header">
-                <h2 class="box__title">Web アプリケーションのゴール</h2>
+                <h2 class="box__title">ストレスのない使用のために</h2>
               </header>
               <section class="box__body paragraph">
-                <p>ストレスなく使用できて、ドメインが目指す方向に向かいやすくする</p>
-              </section>
-            </div>
-          </section>
-          <section class="box">
-            <div>
-              <header class="box__header">
-                <h2 class="box__title">認証・認可のゴール</h2>
-              </header>
-              <section class="box__body paragraph">
-                <p>ストレスなく使用できて、セキュア</p>
+                <p>必要な時に使用可能</p>
+                <p>使用中に操作が中断されない</p>
               </section>
             </div>
           </section>
