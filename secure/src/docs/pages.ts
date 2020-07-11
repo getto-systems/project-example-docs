@@ -67,7 +67,7 @@ function all(version: string): Array<CategoryTree> {
       [ { page: "main",      label: "メインページへ", href: `${main}/index.html`, icon: "home" }, [] ],
     ] ],
     [ { category: "auth", label: "Auth" }, [
-      [ { page: "auth", label: "認証・認可", href: `${docs}/auth.html`, icon: "license" }, [] ],
+      [ { page: "auth", label: "認証", href: `${docs}/auth.html`, icon: "license" }, [] ],
     ] ],
   ];
 }
