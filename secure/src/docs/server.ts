@@ -48,6 +48,8 @@ function Page(props: Props) {
                 <p>ランニングコストの削減</p>
                 <p>デプロイコストの削減</p>
                 <p>アップグレードコストの削減</p>
+                <br/>
+                <p>ランニングコスト: 12,000円/月</p>
               </section>
             </div>
           </section>
@@ -59,6 +61,11 @@ function Page(props: Props) {
               <section class="box__body paragraph">
                 <p>必要な時に使用可能</p>
                 <p>使用中に操作が中断されない</p>
+                <br/>
+                <p>業務時間内での停止許容時間: 5分/8h</p>
+                <small><p>業務時間外はメンテナンスの連絡後停止可能</p></small>
+                <p>レスポンスの最大時間: 1秒</p>
+                <small><p>処理自体に時間がかかる場合は完了時に通知を行う</p></small>
               </section>
             </div>
           </section>
