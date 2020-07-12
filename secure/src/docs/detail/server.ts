@@ -74,9 +74,6 @@ function Page(props: Props) {
               </section>
             </div>
           </section>
-        </section>
-
-        <section class="container">
           <section class="box">
             <div>
               <header class="box__header">
@@ -118,25 +115,27 @@ function Page(props: Props) {
           <section class="box">
             <div>
               <header class="box__header">
-                <h2 class="box__title">現状の構成のよくない点</h2>
-              </header>
-              <section class="box__body paragraph">
-                <p><i class="lnir lnir-close"></i> データベースのダウンで全体が停止</p>
-                <small><p>冗長構成にして、ダウンしないことを祈るしかない</p></small>
-              </section>
-            </div>
-          </section>
-        </section>
-
-        <section class="container">
-          <section class="box">
-            <div>
-              <header class="box__header">
                 <h2 class="box__title">代替案</h2>
               </header>
               <section class="box__body paragraph">
                 <p>Key-Value ストアを使用</p>
                 <p>グラフデータベースを使用</p>
+              </section>
+            </div>
+          </section>
+        </section>
+
+        <br/>
+
+        <section class="container">
+          <section class="box">
+            <div>
+              <header class="box__header">
+                <h2 class="box__title">現状の構成のよくない点</h2>
+              </header>
+              <section class="box__body paragraph">
+                <p><i class="lnir lnir-close"></i> データベースのダウンで全体が停止</p>
+                <small><p>冗長構成にして、ダウンしないことを祈るしかない</p></small>
               </section>
             </div>
           </section>

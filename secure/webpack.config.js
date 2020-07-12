@@ -9,10 +9,10 @@ module.exports = {
 
     entry[`${root}/index`]  = path.join(__dirname, `src/${root}/index.ts`);
     entry[`${root}/server`] = path.join(__dirname, `src/${root}/server.ts`);
-    entry[`${root}/auth`]   = path.join(__dirname, `src/${root}/auth.ts`);
+    entry[`${root}/id`]     = path.join(__dirname, `src/${root}/id.ts`);
 
     entry[`${root}/detail/server`] = path.join(__dirname, `src/${root}/detail/server.ts`);
-    entry[`${root}/detail/auth`]   = path.join(__dirname, `src/${root}/detail/auth.ts`);
+    entry[`${root}/detail/id`]     = path.join(__dirname, `src/${root}/detail/id.ts`);
 
     return entry;
   },
