@@ -72,11 +72,11 @@ function all(version: string): Array<CategoryTree> {
     [ { category: "detail/server", label: "Server 詳細設計" }, [
       [ { page: "detail/server", label: "サーバー構成", href: `${docs}/detail/server.html`, icon: "list" }, [] ],
     ] ],
-    [ { category: "auth", label: "Auth" }, [
-      [ { page: "auth", label: "認証・認可", href: `${docs}/auth.html`, icon: "file-name" }, [] ],
+    [ { category: "id", label: "ID" }, [
+      [ { page: "id", label: "認証・認可", href: `${docs}/id.html`, icon: "file-name" }, [] ],
     ] ],
-    [ { category: "detail/auth", label: "Auth 詳細設計" }, [
-      [ { page: "detail/auth", label: "認証・認可", href: `${docs}/detail/auth.html`, icon: "list" }, [] ],
+    [ { category: "detail/id", label: "ID 詳細設計" }, [
+      [ { page: "detail/id", label: "認証・認可", href: `${docs}/detail/id.html`, icon: "list" }, [] ],
     ] ],
   ];
 }
