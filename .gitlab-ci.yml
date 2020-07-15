@@ -34,7 +34,7 @@ release:
   stage: release
   only:
     refs:
-      - release@getto-systems-base/labo/project-example/docs
+      - release@getto-systems-base/projects/example/docs
     changes:
       - .release-version
   except:
@@ -51,7 +51,7 @@ release_deploy:
   stage: release_deploy
   only:
     refs:
-      - release@getto-systems-base/labo/project-example/docs
+      - release@getto-systems-base/projects/example/docs
     changes:
       - .release-version
   except:
@@ -69,7 +69,7 @@ release_success:
   stage: release_notify
   only:
     refs:
-      - release@getto-systems-base/labo/project-example/docs
+      - release@getto-systems-base/projects/example/docs
     changes:
       - .release-version
   except:
@@ -91,7 +91,7 @@ release_failure:
   stage: release_notify
   only:
     refs:
-      - release@getto-systems-base/labo/project-example/docs
+      - release@getto-systems-base/projects/example/docs
     changes:
       - .release-version
   except:
