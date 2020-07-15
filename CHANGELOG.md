@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## Version : 0.2.0
+
+- fix: bump ignore : See merge request getto-systems-base/projects/example/docs!60
+- fix: gitlab ci : See merge request getto-systems-base/projects/example/docs!58
+- fix: docs : See merge request getto-systems-base/labo/project-example/docs!57
+- fix: docs : See merge request getto-systems-base/labo/project-example/docs!56
+- fix: docs : See merge request getto-systems-base/labo/project-example/docs!55
+- fix: docs : See merge request getto-systems-base/labo/project-example/docs!54
+- add: docs : See merge request getto-systems-base/labo/project-example/docs!53
+- fix: pages : See merge request getto-systems-base/labo/project-example/docs!52
+- fix: prepare : See merge request getto-systems-base/labo/project-example/docs!51
+- apply: css : See merge request getto-systems-base/labo/project-example/docs!50
+
+
 ## Version : 0.1.20
 
 - merge: dependabot : See merge request getto-systems-base/labo/project-example/docs!48
