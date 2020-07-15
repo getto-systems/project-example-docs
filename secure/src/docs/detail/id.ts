@@ -261,17 +261,20 @@ function Page(props: Props) {
                     <p>有効期限は適切に制限</p>
                     <small><p>経路によって時間を長くする、とか必要かも</p></small>
                     <small><p>web-authn で認証したら最大延長期間を長くしていいかも</p></small>
+                    <p>nonce を生成</p>
                     <p>認証済チケットを登録</p>
                   </dd>
                 </dl>
                 <dl class="form">
                   <dt class="form__header">認証済チケット情報の登録</dt>
                   <dd class="form__field">
-                    <p>以下の情報とともに適切に記録</p>
+                    <p>nonce をキーとして、以下の認証済みチケット情報を登録する</p>
                     <ul>
-                      <li><small><i class="lnir lnir-chevron-right"></i></small> 延長操作のための nonce</li>
+                      <li><small><i class="lnir lnir-chevron-right"></i></small> ユーザーID</li>
                       <li><small><i class="lnir lnir-chevron-right"></i></small> 最大延長期間</li>
                     </ul>
+                    <p>nonce が衝突したら一定回数再試行</p>
+                    <p>すべて失敗した場合は認証失敗</p>
                   </dd>
                 </dl>
               </section>
@@ -293,16 +296,23 @@ function Page(props: Props) {
                   <dt class="form__header">イベント</dt>
                   <dd class="form__field">
                     <ul>
-                      <li>RenewTicket</li>
-                      <li>RenewTicketFailed</li>
+                      <li>ExtendTicket</li>
+                      <li>ExtendTicketFailed</li>
                     </ul>
                   </dd>
                 </dl>
                 <dl class="form">
                   <dt class="form__header">詳細</dt>
                   <dd class="form__field">
-                    <p>nonce が異なる場合は延長しない</p>
+                    <p>認証済みチケットが取得できない場合延長しない</p>
+                    <p>ユーザーID が異なる場合延長しない</p>
                     <p>最大延長期間を超えて延長しない</p>
+                  </dd>
+                </dl>
+                <dl class="form">
+                  <dt class="form__header">認証済チケット情報の取得</dt>
+                  <dd class="form__field">
+                    <p>nonce をキーとして認証済みチケット情報を取得</p>
                   </dd>
                 </dl>
               </section>
@@ -360,8 +370,8 @@ function Page(props: Props) {
                   <dt class="form__header">イベント</dt>
                   <dd class="form__field">
                     <ul>
-                      <li>IssueAPIToken</li>
-                      <li>IssueAPITokenFailed</li>
+                      <li>IssueApiToken</li>
+                      <li>IssueApiTokenFailed</li>
                     </ul>
                   </dd>
                 </dl>
