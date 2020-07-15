@@ -1,3 +1,9 @@
 /*
-!/public/dist/**/*.html
-!/secure/dist/**/*.html
+!/public
+/public/*
+!/public/src/
+!/public/dist/
+!/secure
+/secure/*
+!/secure/src/
+!/secure/dist/
